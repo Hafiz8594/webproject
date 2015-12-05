@@ -57,7 +57,7 @@ include 'db.php';
 				}
 			echo "</select>";
 		?><br /><br />
-		<input type="submit" value="Delete" onclick="processDelete()">
+		<input type="button" value="Delete" onclick="processDelete()">
 	</form>
 
 </body>

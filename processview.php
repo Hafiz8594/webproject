@@ -25,6 +25,7 @@ include 'db.php';
 		</ul>
 	</header><br /><br />
 
+	<center>
 	<?php 
 
 		dbConnect('animal_kingdom');
@@ -47,5 +48,6 @@ include 'db.php';
 		<td>{$row["species"]}</td>
 		<td>{$row["diet"]}</td></tr>";
 	?>
+	</center>
 </body>
 </html>
