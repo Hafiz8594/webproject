@@ -52,7 +52,7 @@
 		<label>Name:</label><input type="text" name="name" required><br />
 		<label>Species:</label><input type="text" name="species" required><br />
 		<label>Diet:</label><input type="text" name="diet" required><br/><br/>
-		<input type="button" value="Submit" onclick="submitForm()">
+		<input type="button" value="Add" onclick="submitForm()">
 	</form>
 </body>
 </html>

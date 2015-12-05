@@ -37,7 +37,7 @@
 		Select an action to perform on the animal database:<br /><br/>
 		<button onClick = "location.href='newanimal.php'" style="width: 200px; height: 60px" type="button">Add</button><br />
 		<button onClick = "location.href='deleteanimal.php'" style="width: 200px; height: 60px" type="button">Delete</button><br />
-		<button onClick = "location.href='modifyanimal.php'" style="width: 200px; height: 60px" type="button">Modify</button><br />
+		<button onClick = "location.href='modifyanimal.php'" style="width: 200px; height: 60px" type="button">Update</button><br />
 	</center>
 	
 

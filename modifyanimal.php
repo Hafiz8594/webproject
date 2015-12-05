@@ -20,11 +20,11 @@ include 'db.php';
 	</style>
 	<!-- END OF INTERNAL STYLE SHEET!!! -->
 	<script type="text/javascript">
-		function processDelete(){
+		function processModify(){
 			//document.forms["animalselect"].reset();
-			document.forms["animalselect"].submit();
-			setTimeout(function () { window.location.reload(); }, 10);
-			alert("The animal has been succesfully deleted from the database.");
+			document.forms["animalmodify"].submit();
+			document.forms["animalmodify"].reset();
+			//setTimeout(function () { window.location.reload(); }, 10);
 		}
 
 	</script>
@@ -43,9 +43,9 @@ include 'db.php';
 			<li><a href="reviews.php">View Reviews</a></li>
 		</ul>
 	</header><br /><br />
-	Select the animal you would like to delete: 
-	
-	<form style="display: inline;" name="animalselect" method="post" action="processdelete.php">
+	Select the animal you would like to update: 
+
+	<form style="display: inline;" name="animalmodify" method="post" action="processmodify.php">
 		<?php
 			dbConnect('animal_kingdom');
 			$sql = "SELECT name FROM animals";
@@ -56,9 +56,8 @@ include 'db.php';
 					echo "<option value='$query_item[name]'>".htmlspecialchars($query_item["name"])."</option>";
 				}
 			echo "</select>";
-		?><br /><br />
-		<input type="submit" value="Delete" onclick="processDelete()">
+		?><br />
+		<label>Species:</label><input type="text" name="species" required><br />
+		<label>Diet:</label><input type="text" name="diet" required><br/><br/>
+		<input type="submit" value="Insert Modificiation" onclick="processModify()">
 	</form>
-
-</body>
-</html>
