@@ -43,23 +43,20 @@ include 'db.php';
 			<li><a href="reviews.php">View Reviews</a></li>
 		</ul>
 	</header><br /><br />
-	Select the animal you would like to update: 
-
-	<form style="display: inline;" name="animalmodify" method="post" action="processmodify.php">
+	Select to view all animals, or by species: 
+	<form style="display: inline;" name="viewanimals" method="post" action="processview.php">
 		<?php
 			dbConnect('animal_kingdom');
-			$sql = "SELECT name FROM animals";
+			$sql = "SELECT DISTINCT species FROM animals";
 			$query = mysql_query($sql);
-			echo "<select name='names'>";
-				echo "<option value=''>Select an animal</option>";
+			echo "<select name='species'>";
+				echo "<option value='*'>All</option>";
 				while($query_item = mysql_fetch_array($query)){
-					echo "<option value='$query_item[name]'>".htmlspecialchars($query_item["name"])."</option>";
+					echo "<option value='$query_item[species]'>".htmlspecialchars($query_item["species"])."</option>";
 				}
 			echo "</select>";
-		?><br />
-		<label>Species:</label><input type="text" name="species" required><br />
-		<label>Diet:</label><input type="text" name="diet" required><br/><br/>
-		<input type="submit" value="Insert Modificiation" onclick="processModify()">
-	</form>
+			?>
+			<input type="submit" value="View Animals">
+
 </body>
 </html>
