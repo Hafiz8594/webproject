@@ -41,6 +41,7 @@ include 'db.php';
 			<li><a href="view.php">View Animals</a></li>
 			<li><a href="survey.php">Take Survey</a></li>
 			<li><a href="reviews.php">View Reviews</a></li>
+			<li><a href="files.html">External Files</a></li>
 		</ul>
 	</header><br /><br />
 	Select to view all animals, or by species: 
@@ -59,4 +60,6 @@ include 'db.php';
 			<input type="submit" value="View Animals">
 
 </body>
+
+
 </html>

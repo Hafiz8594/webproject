@@ -15,19 +15,4 @@
 	$result = mysql_query($sql)
 				or die('Error querying database');
 
-
-	// echo'<table border=1>
-	// <tr><th>Name</th><th>Comment</th><th>Rating</th></tr>';
-
-	// // Create SQL statement
-	// $query2 = "SELECT * FROM survey_data";
-	// // Execute SQL statement
-	// if (!($result2 = @ mysqli_query ($dbc, $query2)))
-	//   echo 'Error querying database...';
-	// // Display results
-	// while ($row = @ mysqli_fetch_array($result2))
-	//   echo "<td>{$row["name"]}</td>
-	// <td>{$row["comment"]}</td>
-	// <td>{$row["rating"]}</td></tr>";
-
 ?>

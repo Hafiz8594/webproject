@@ -14,12 +14,20 @@
 		<title>Animal Kingdom Survey</title>
 	</head>
 
-	<body onload="welcome();">
+	<body>
 
 
 		<header>
-			<h1>Animal Kindgom Survey</h1>
-		</header>
+		<h1>Welcome to Hafiz's Animal Kingdom!</h1>
+		<ul class="main_nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="manage.php">Manage Animals</a></li>
+			<li><a href="view.php">View Animals</a></li>
+			<li><a href="survey.php">Take Survey</a></li>
+			<li><a href="reviews.php">View Reviews</a></li>
+			<li><a href="files.html">External Files</a></li>
+		</ul>
+		</header><br />
 
 		<div id="centercol">
 			<h4>Customer Satisfaction Survery</h4>
@@ -57,7 +65,6 @@
 
 				<br />
 				<br />
-				<button type="button" onClick="window.open(process_survey.php)">View Comments</button>
 				<input type="submit" value="Submit" onclick="return validateForm(this.form)">
 				<button type="reset" value="Reset">Reset</button>
 
@@ -68,8 +75,7 @@
 
 		<br />
 		<footer>
-			JavaScript can be found here: <a href="script.js">script.js</a><br />
-			Stylesheet can be found here: <a href="style.css">style.css</a>
+			Thank you for visiting Hafiz's Animal Kingdom. We hope to see you again soon!
 		</footer>
 
 	</body>

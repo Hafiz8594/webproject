@@ -1,3 +1,8 @@
+<?php
+include 'common.php';
+include 'db.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -36,6 +41,7 @@
 			<li><a href="view.php">View Animals</a></li>
 			<li><a href="survey.php">Take Survey</a></li>
 			<li><a href="reviews.php">View Reviews</a></li>
+			<li><a href="files.html">External Files</a></li>
 		</ul>
 	</header><br /><br />
 	Select the animal you would like to update: 
@@ -54,7 +60,7 @@
 		?><br />
 		<label>Species:</label><input type="text" name="species" required><br />
 		<label>Diet:</label><input type="text" name="diet" required><br/><br/>
-		<input type="submit" value="Insert Modificiation" onclick="processModify()">
+		<input type="submit" value="Update" onclick="processModify()">
 	</form>
 </body>
 </html>

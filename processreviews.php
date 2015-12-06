@@ -31,26 +31,24 @@ include 'db.php';
 
 		dbConnect('animal_kingdom');
 		echo'<table border=1>
-		<tr><th>ID</th><th>Name</th><th>Species</th><th>Diet</th></tr>';
+		<tr><th>Name</th><th>Favorite Animal</th><th>Rating</th><th>Comment</th></tr>';
 
 		// Create SQL statement
-		if($_POST["species"] == "*"){
-			$sql = "SELECT * FROM animals";
+		if($_POST["reviews"] == "*"){
+			$sql = "SELECT * FROM survey";
 		} else {
-			$sql = "SELECT * FROM animals WHERE species = '$_POST[species]'";
+			$sql = "SELECT * FROM survey WHERE rating = '$_POST[reviews]'";
 		}
 		// Execute SQL statement
 		if (!($result = @ mysql_query ($sql)))
 		  echo 'Error querying database...';
 		// Display results
 		while ($row = @ mysql_fetch_array($result))
-		  echo "<tr><td>{$row["id"]}</td>
-		<td>{$row["name"]}</td>
-		<td>{$row["species"]}</td>
-		<td>{$row["diet"]}</td></tr>";
+		  echo "<tr><td>{$row["name"]}</td>
+		<td>{$row["animal"]}</td>
+		<td>{$row["rating"]}</td>
+		<td>{$row["comment"]}</td></tr>";
 	?>
 	</center>
 </body>
-
-
 </html>

@@ -20,11 +20,11 @@ include 'db.php';
 	</style>
 	<!-- END OF INTERNAL STYLE SHEET!!! -->
 	<script type="text/javascript">
-		function processDelete(){
+		function processModify(){
 			//document.forms["animalselect"].reset();
-			document.forms["animalselect"].submit();
-			setTimeout(function () { window.location.reload(); }, 10);
-			alert("The animal has been succesfully deleted from the database.");
+			document.forms["animalmodify"].submit();
+			document.forms["animalmodify"].reset();
+			//setTimeout(function () { window.location.reload(); }, 10);
 		}
 
 	</script>
@@ -44,22 +44,22 @@ include 'db.php';
 			<li><a href="files.html">External Files</a></li>
 		</ul>
 	</header><br /><br />
-	Select the animal you would like to delete: 
-	
-	<form style="display: inline;" name="animalselect" method="post" action="processdelete.php">
+		Select to view all reviews, or by rating: 
+	<form style="display: inline;" name="viewreviews" method="post" action="processreviews.php">
 		<?php
 			dbConnect('animal_kingdom');
-			$sql = "SELECT name FROM animals";
+			$sql = "SELECT DISTINCT rating FROM survey";
 			$query = mysql_query($sql);
-			echo "<select name='names'>";
-				echo "<option value=''>Select an animal</option>";
+			echo "<select name='reviews'>";
+				echo "<option value='*'>All</option>";
 				while($query_item = mysql_fetch_array($query)){
-					echo "<option value='$query_item[name]'>".htmlspecialchars($query_item["name"])."</option>";
+					echo "<option value='$query_item[rating]'>".htmlspecialchars($query_item["rating"])."</option>";
 				}
 			echo "</select>";
-		?><br /><br />
-		<input type="button" value="Delete" onclick="processDelete()">
-	</form>
+			?>
+			<input type="submit" value="View Reviews">
 
 </body>
+
+
 </html>
