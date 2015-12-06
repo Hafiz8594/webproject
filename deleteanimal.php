@@ -23,7 +23,7 @@ include 'db.php';
 		function processDelete(){
 			//document.forms["animalselect"].reset();
 			document.forms["animalselect"].submit();
-			setTimeout(function () { window.location.reload(); }, 10);
+			setTimeout(function () { window.location.reload(); }, 30);
 			alert("The animal has been succesfully deleted from the database.");
 		}
 
